@@ -1,0 +1,23 @@
+
+function productSum(array, depth = 1){
+  let totalSum = 0
+  for(let i = 0; i < array.length; i++){
+    let curr = array[i]
+    if((typeof curr) === "number"){
+      totalSum += curr
+    }else {
+      totalSum += productSum(curr, depth + 1)
+    }
+  }
+  return totalSum * depth
+}
+let totalSum = 0
+loop throught
+  let curr = array[idx]
+    if(Array.isArray(curr)){
+      totalSum += productSum(curr, depth + 1)
+    }else {
+      totalSum += curr
+    }
+    
+ return totalSum * depth
